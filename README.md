@@ -12,3 +12,7 @@ cat responsive.txt | rev | cut -d '/' -f 1 | rev |
 pulls links from txt and pulls out words in jslinks then sorts alphabeticly and saves.
 
 cat ~/tools/scripthunter/jslinks.txt | Python3 getjswords.py $2 | sort -u jswords.txt | tee -a jswords.txt
+#
+
+sudo cat ~/recon/mastercard.comtxt | httpx -silent | anew | xargs -I@ jaeles scan -c 100 -s /jaeles-signatures/ -u @
+
